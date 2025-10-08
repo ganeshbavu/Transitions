@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPEC-HYD</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+     a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ffcc00;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      font-size: 28px;
+      letter-spacing: 1px;
+      transition: transform 0.3s ease;
+    }
+
+    header h1:hover {
+      transform: scale(1.05);
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-weight: 500;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #ffcc00;
+      left: 0;
+       bottom: -5px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1604134967494-8c9f93c0679b') no-repeat center/cover;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 50px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: transform 0.4s ease, background-color 0.4s ease;
+    }
+
+    .hero h2:hover {
+      transform: scale(1.1);
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 15px;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background-color 0.4s ease;
+    }
+
+    .hero p:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .about {
+      padding: 80px 60px;
+      background: white;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 32px;
+      color: #003366;
+      margin-bottom: 20px;
+      transition: color 0.4s ease;
+    }
+
+    .about h2:hover {
+      color: #ff6600;
+    }
+.about p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .courses {
+      background-color: #eef3f9;
+      padding: 70px 60px;
+      text-align: center;
+    }
+
+    .courses h2 {
+      font-size: 32px;
+      color: #003366;
+      margin-bottom: 40px;
+    }
+
+    .course-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+       }
+
+    .course-card {
+      background: white;
+      width: 260px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      background-color: #fefefe;
+    }
+
+    .course-card h3 {
+      color: #003366;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+       }
+
+    .course-card h3:hover {
+      color: #ff6600;
+    }
+    .campus {
+      padding: 80px 60px;
+      text-align: center;
+    }
+
+    .campus h2 {
+      color: #003366;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+
+    .campus img {
+      width: 85%;
+      border-radius: 15px;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .campus img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    .contact {
+      background-color: #003366;
+      color: white;
+      padding: 60px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+      font-size: 30px;
+      transition: color 0.4s ease;
+    }
+
+    .contact h2:hover {
+      color: #ffcc00;
+    }
+
+    .contact p {
+      font-size: 18px;
+      margin: 8px 0;
+      transition: transform 0.3s 
+       }
+
+    .contact p:hover {
+      transform: scale(1.05);
+    }
+footer {
+      background-color: #002244;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;}
+    </style>
+</head>
+<body>
+<header>
+    <h1>St. PETER'S ENGINEERING COLLEGE-Maisammaguda</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#campus">Campus</a>
+      <a href="#contact">Contact</a>
+    </nav>
+</header>
+<!-- HERO -->
+  <section class="hero">
+    <h2>Welcome to St. PETER'S ENGINEERING COLLEGE</h2>
+    <p>Empowering Education • Inspiring Innovation</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      SPEC College is one of the leading educational institutions offering top-quality education 
+      in Science, Technology, Commerce, and Humanities. Our mission is to foster intellectual 
+      curiosity, leadership, and innovation among students.
+    </p>
+  </section>
+
+  <!-- COURSES -->
+  <section class="courses" id="courses">
+    <h2>Our Courses</h2>
+    <div class="course-container">
+      <div class="course-card">
+        <h3>B.Tech</h3>
+        <p>Engineering courses in CSE, CSE(AI&ML,DS,AI&DS,CSD,CSM) ECE, Civil, and EEE disciplines.</p>
+      </div>
+      <div class="course-card">
+        <h3>MBA</h3>
+        <p>Programs in Accountance, finance, Mathematics, and Computer Science.</p>
+      </div>
+      <div class="course-card">
+        <h3>BBA</h3>
+        <p>Business Administration program with a focus on innovation and strategy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPUS -->
+  <section class="campus" id="campus">
+    <h2>Our Campus</h2>
+    <img src="https://spechyd.ac.in/wp-content/uploads/2025/04/Spec-Low-Elevation-1-scaled.webp" alt="Campus Image">
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@spechyd.edu</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Location: Hyderabad, India</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 st.Peter's Engineering College | All Rights Reserved
+  </footer>
+    
+</body>
+</html>
