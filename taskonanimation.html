@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animations</title>
+     <style>
+        .earth{
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            border-radius: 50%;
+            animation: eclipse 4s infinite ease-in-out;
+        }
+        .sun{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(220, 128, 22);
+            border-radius: 50%;
+            
+        }
+        @keyframes eclipse{
+           0%   { width: 100px; height: 100px; background-color: orange; }
+           25%  { width: 200px; height: 200px; background-color: gold; }
+           
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <center>
+         <div class="n" style="background-color:aliceblue; margin-left: 300px; margin-right: 500px;height: 400px;">
+             <div class="earth"> 
+             <div class="sun" style="margin-top: 200px;">
+             </div>
+             </div>
+             </div>
+             </div>
+    </center>
+</body>
+</html>
